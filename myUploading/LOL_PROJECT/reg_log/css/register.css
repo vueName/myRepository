@@ -1,0 +1,75 @@
+body{
+	background:#E9CFAD;
+
+}
+div.container{
+	margin:200px auto;
+	width:1200px;
+	height:600px;
+	background:url("../img/big157001.jpg") no-repeat;
+	background-size:cover;
+	border:1px solid #E9CFAD;
+}
+div.main{
+	width:800px;
+	margin:90px auto;
+	font-size:20px;
+	padding-left:20px;
+	padding-bottom:20px;
+	color:#fff;
+	
+}
+div.main p{
+	margin:0;
+}
+div.main p input{
+	width:200px;
+	height:30px;
+	font-size:16px;
+	margin-bottom:20px;
+	background-color:transparent;
+	outline:none;
+	color:#fff;
+}
+div.main p input::-webkit-input-placeholder{
+	color:#fff;
+	text-align:center;
+	
+}
+div.main button{
+	padding:0;
+	border:0;
+	
+}
+
+div.main button a{
+	width:300px;
+	height:40px;
+	line-height:40px;
+	display:block;
+	font-size:16px;
+	text-decoration:none;
+	color:#fff;
+	background-image:linear-gradient(to bottom,#31B0D5,#31B0D5);
+}
+div.main button.btn:hover{
+	cursor:pointer;
+}
+div.main p.gender #gender{
+	height:34px;
+	width:72px;
+	text-align:center;
+	font-size:16px;
+	padding-left:20px;
+	margin-bottom:20px;
+	background-color:transparent;
+	color:#fff;
+}
+div.main p.gender #gender option{
+	/*background-color:transparent;*/
+	color:#000;
+}
+div.main p span{
+	font-size:16px;
+	margin-left:22px;
+}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/register.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<p>
+					用户名称：
+					<input type="text"id="uname"placeholder="请输入用户名"onblur="load_uname()">
+					<span id="show_uname"></span>
+				</p>
+				<p>
+					用户密码：
+					<input type="password"id="upwd"placeholder="请输入密码"onblur="load_upwd()">
+					<span id="show_upwd"></span>
+				</p>
+				<p>
+					重复密码：
+					<input type="password"id="cpwd"placeholder="请重复密码"onblur="load_cpwd()">
+					<span id="show_cpwd"></span>
+				</p>
+				<p>
+					联系方式：
+					<input type="text"id="phone"placeholder="请输入联系方式"onblur="load_phone()">
+						<span id="show_phone"></span>
+				</p>
+				<p>
+					用户邮箱：
+					<input type="text"id="email"placeholder="请输入邮箱"onblur="load_email()">
+						<span id="show_email"></span>
+				</p>
+				<p>
+					用户姓名：
+					<input type="text"id="user_name"placeholder="请输入姓名"onblur="load_userName()">
+					<span id="show_userName"></span>
+				</p>
+				<p class="gender">
+					用户性别：
+					<select id="gender">
+						<option value="1">男</option>
+						<option value="0">女</option>
+					</select>
+				</p>
+				<button onclick="register()"class="btn"><a>注册</a></button>
+		  </div>
+		</div>
+		
+		
+		<script src="common.js"></script>
+		<script>
+			/*声明全局变量*/
+			var isName=true,reg1=/^[A-Za-z0-9]{6,18}$/;
+			var isUpwd=true,reg2=/^[\w]{6,18}$/;
+			var isCpwd=true;
+			var isPhone=true,//reg4=/^(+86|0086)?\s+1[34578]\d{9}$/;
+			reg4=/^1[34578]\d{9}$/;
+			var isEmail=true,reg5=/^[A-Za-z]{3,10}\@[A-Za-z0-9]{3,6}\.[a-z]{2,6}$/;
+			//reg5=/^[A-Za-z]{3,10}@[a-z]{2,6}\.[a-z]{2,6}$/;
+			var isUserName=true,reg6=/^[\u4e00-\u9fa5]{2,6}$/;
+			
+			/*验证用户名格式及是否重复*/
+			function load_uname(){
+				if($("uname").value==""){
+					$("show_uname").innerHTML="用户名不能为空";
+					isName=false;
+				}else if(!reg1.test($("uname").value)){
+					$("show_uname").innerHTML="用户名格式不正确";
+					isName=false;
+				}else{
+					var xhr=createXhr();
+					xhr.open("get","register00.php?uname="+$("uname").value,true);
+					xhr.onreadystatechange=function(){
+						if(xhr.readyState==4&&xhr.status==200){
+							var res=xhr.responseText;
+							//console.log(res);
+							if(res==1){
+								$("show_uname").innerHTML="用户名可以使用";
+							}else{
+								$("show_uname").innerHTML="用户名重复，请重新输入";
+								isName=false;
+							}
+						}
+					}
+					xhr.send(null);
+				}
+					
+			}
+			/*验证密码*/
+			function load_upwd(){
+				if($("upwd").value==""){
+					$("show_upwd").innerHTML="密码不能为空";
+					isUpwd=false;
+				}else if(!reg2.test($("upwd").value)){
+					$("show_upwd").innerHTML="密码格式不正确";
+					isUpwd=false;
+				}else{
+					$("show_upwd").innerHTML="密码可用";
+				}
+			}
+			/*重复密码*/
+			function load_cpwd(){
+				if($("cpwd").value==$("upwd").value){
+					$("show_cpwd").innerHTML="通过";
+				}else{
+					$("show_cpwd").innerHTML="两次密码输入不一致，请重新输入";
+					isUpwd=false;
+				}
+			}
+			/*联系方式*/
+			function load_phone(){
+				if($("phone").value==""){
+					$("show_phone").innerHTML="手机号不能为空";
+					isPhone=false;
+				}else if(!reg4.test($("phone").value)){
+					$("show_phone").innerHTML="手机号格式不正确";
+					isPhone=false;
+				}else{
+					$("show_phone").innerHTML="手机号可用";
+				}
+			}
+			/*用户邮箱*/
+			function load_email(){
+				if($("email").value==""){
+					$("show_email").innerHTML="邮箱不能为空";
+					isEmail=false;
+				}else if(!reg5.test($("email").value)){
+					$("show_email").innerHTML="邮箱格式不正确";
+					isEmail=false;
+				}else{
+					$("show_email").innerHTML="邮箱可用";
+				}
+			}
+			/*用户姓名*/
+			function load_userName(){
+				if($("user_name").value==""){
+					$("show_userName").innerHTML="姓名不能为空";
+					isUserName=false;
+				}else if(!reg6.test($("user_name").value)){
+					$("show_userName").innerHTML="姓名格式不正确";
+					isUserName=false;
+				}else{
+					$("show_userName").innerHTML="姓名可用";
+				}
+			}
+			/*注册*/
+			function register(){
+				if(isName&&isUpwd&&isCpwd&&isPhone&&isEmail&&isUserName){
+					var xhr=createXhr();
+					xhr.open("post","register01.php",true);
+					xhr.onreadystatechange=function(){
+						if(xhr.readyState==4&&xhr.status==200){
+							var res=xhr.responseText;
+							if(res==1){
+								alert("注册成功");
+								location.href="login.html";
+							}else{
+								alert("注册失败");
+							}
+						}
+					}
+					xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+					var uname=$("uname").value;
+					var upwd=$("upwd").value;
+					var phone=$("phone").value;
+					var email=$("email").value;
+					var user_name=$("user_name").value;
+					var gender=$("gender").value;
+					var msg="uname="+uname+"&upwd="+upwd+"&phone="+phone+"&email="+email+"&user_name="+user_name+"&gender="+gender;
+					xhr.send(msg);
+				}
+				else{
+					alert("注册失败");
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+$(()=>{
+	$.ajax({
+		type:"get",
+		url:"footer.html",
+		dataType:"html"
+	}).then(data=>{
+		$("#footer").html(data);
+	})
+})

@@ -1,0 +1,16 @@
+SET NAMES UTF8;
+DROP DATABASE IF EXISTS LOL;
+CREATE DATABASE LOL CHARSET=UTF8;
+USE LOL;
+CREATE TABLE lol(
+	uid INT PRIMARY KEY AUTO_INCREMENT,
+	uname VARCHAR(32) UNIQUE,
+	upwd  VARCHAR(32),
+	phone VARCHAR(32),
+	email VARCHAR(32),
+	user_name VARCHAR(32),
+	gender bool
+);
+INSERT INTO lol values(
+	1,"tom","123456","25697845192","tom@tedu.cn","汤姆",1
+);

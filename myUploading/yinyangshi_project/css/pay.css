@@ -1,0 +1,256 @@
+/**************页面顶部导航***********/
+    #nav_top{
+        background:#151B25;
+        display:flex;
+        justify-content: center;
+        padding:12px 0;
+    }
+    div.nav_logo{
+        width:30%;
+    }
+   div.nav_right{
+        width:32%;
+    }
+    /****导航栏右侧上方****/
+        div.nav_right>p{
+            text-align: right;
+            box-sizing: border-box;
+            padding-right: 70px;
+        }
+        div.nav_right>p>a{
+            display: inline-block;
+            width:70px;
+            color:#A7A78F;
+            text-align: center;
+        }
+        div.nav_right>p>a:hover{
+            color: #FFFF85;
+        }
+    /********右侧下方列表******/
+        ul.nav_list>li>a{
+            display: inline-block;
+            width:140px;
+            height:40px;
+            color:#fff;
+            font-size:16px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            margin-right: 4px;
+        }
+        ul.nav_list>li:first-child>a{
+            background: #D21B35;
+        }
+        ul.nav_list>li>a:hover{
+            background: #D21B35;
+        }
+
+/***************大轮播图区域***************/
+/*****左侧轮播图******/
+    div.left_carousel{
+        width:1900px;
+        height:438px;
+        position:relative;
+        overflow:hidden;
+    }
+    /*****图片****/
+    div.left_carousel>ul.pic_container>li img{
+        width:1900px;
+    }
+    /*****写死的容器宽度******/
+    div.left_carousel ul.pic_container{
+        /*		width:1080px;*/
+        position:absolute;
+    }
+    div.left_carousel ul.pic_container>img{
+        float:left;
+    }
+    /*小按钮绝对定位*/
+    div.left_carousel ul.button{
+        position:absolute;
+        z-index:50;
+        bottom:16px;
+        left:45%;
+    }
+    div.left_carousel ul.button>li{
+        float:left;
+        width:12px;
+        height:12px;
+        border-radius:50%;
+        border:2px solid #E37B63;
+        margin-right:10px;
+    }
+    div.left_carousel ul.button>li:hover{
+        cursor:pointer;
+        background:#E37B63;
+    }
+    div.left_carousel ul.button>li.hover{
+        background:#E37B63;
+    }
+    /********左右方向键*********/
+       div.left_carousel a.ck-slide{
+            position:absolute;
+            top:157px;
+            width:43px;
+            height:80px;
+            border-radius:3px;
+            /*background:rgba(0,0,0,0.7);*/
+            transition:all .3s linear;
+        }
+        div.left_carousel a.ck-left{
+            left:26%;
+            background:rgba(0,0,0,0.5) url(../img/pay/arrow-left.png) no-repeat center center;
+        }
+        div.left_carousel a.ck-right{
+            right:26%;
+            background:rgba(0,0,0,0.5) url(../img/pay/arrow-right.png) no-repeat center center;
+        }
+        div.left_carousel a.ck-left:hover{
+            background:rgba(0,0,0,0.3) url(../img/pay/arrow-left.png) no-repeat center center;;
+        }
+        div.left_carousel a.ck-right:hover{
+            background:rgba(0,0,0,0.3) url(../img/pay/arrow-right.png) no-repeat center center;;
+        }
+
+
+/**************页面主体内容**************/
+    div.content_body{
+        width:75%;
+        margin:35px auto;
+    }
+    div.pay_pro>h1{
+        color:#D21B35;
+    }
+    /********主体内容导航********/
+        div.content_nav>ul>li{
+            box-sizing: border-box;
+            width:356px;
+            height: 70px;
+            background:#F3F3F3;
+            border: 1px solid #DFDFDF;
+            text-align: center;
+            line-height: 60px;
+            margin-top:30px;
+            font-size: 27px;
+            color:#595959;
+            font-weight: bold;
+        }
+        div.content_nav>ul>li:hover{
+            color:#CF1B37;
+            border-top:4px solid #CF1B37;
+            border-bottom-color:transparent;
+            background: #fff;
+            cursor: pointer;
+        }
+        div.content_nav>ul>li.active{
+            color:#CF1B37;
+            border-top:4px solid #CF1B37;
+            border-bottom-color:transparent;
+            background: #fff;
+        }
+    /*********主体内容图片**************/
+        div.content_pic>p{
+            position:relative;
+        }
+        div.content_pic>p>a>img{
+            float:left;
+            width:354px;
+            border:1px solid #ddd;
+        }
+        div.content_pic>p>span{
+            position: absolute;
+            font-size:20px;
+            width:100%;
+            left:0px;
+            bottom:20px;
+            text-align:center;
+            font-weight:bold;
+        }
+        div.content_pic>p>span:hover{
+            cursor: pointer;
+        }
+/**********页尾************/
+    #footer{
+        background:#F0F0F0;
+        margin-top:20px;
+        padding-top:25px;
+        padding-bottom:42px;
+    }
+    div.footer_container{
+        width:64%;
+        margin:0 auto;
+
+    }
+    div.footer_container>div.footer_up{
+        display:flex;
+        justify-content: space-between;
+        border-bottom:1px dashed #939393;
+        padding-bottom:20px;
+    }
+    p.left_one>span,p.right_one>span{
+        font-size:19px;
+        color:#626262;
+    }
+    div.footer_container>div.footer_up a{
+        color:#999;
+    }
+    /***左侧列表**/
+    ul.list_que_one>li{
+        margin:0 0 10px 0;
+    }
+    ul.list_que_one>li>a{
+        border-bottom:1px solid transparent;
+    }
+    ul.list_que_one>li>a:hover{
+        border-bottom:1px solid #999;
+    }
+    ul.list_que_two>li{
+        margin:0 0 10px 0;
+    }
+    ul.list_que_two>li>a{
+        border-bottom:1px solid transparent;
+    }
+    ul.list_que_two>li>a:hover{
+        border-bottom:1px solid #999;
+    }
+    /*****右侧列表*****/
+    ul.list_tel>li.list_odd{
+        font-size:19px;
+        color:#626262;
+    }
+    ul.list_tel>li:nth-child(3){
+        margin-top:10px;
+    }
+    ul.list_tel>li.list_even{
+        color:#999;
+    }
+    ul.list_tel>li.list_even>a{
+        border-bottom:1px solid transparent;
+    }
+    ul.list_tel>li.list_even>a:hover{
+        border-bottom:1px solid #999;
+    }
+    /*******页尾联系*******/
+        div.footer_down{
+            display: flex;
+            justify-content: center;
+            margin-top:20px;
+        }
+        div.footer_down_right>ul>li{
+            color:#939393;
+        }
+        div.footer_down_right>ul>li>a{
+            color:#939393;
+            border-bottom:1px solid transparent;
+        }
+        div.footer_down_right>ul>li>a:hover{
+            border-bottom:1px solid #939393;
+        }
+        div.footer_down_right>p{
+            color:#939393;
+            margin-top:8px;
+        }
+        div.footer_down_right{
+            margin-left:34px;
+            margin-top:7px;
+        }

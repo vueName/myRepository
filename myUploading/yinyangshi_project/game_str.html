@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name="viewport"content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible"content="IE-edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">muted
+    <link rel="stylesheet" href="css/game_str.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <div class="main">
+        <!--动态加载页头-->
+        <div id="header"></div>
+        <!--游戏攻略导航图-->
+        <div class="nav_line">
+            <p><img src="img/game_str/1.png" alt=""></p>
+        </div>
+        <!--游戏导航栏-->
+        <div class="game_nav">
+            <ul class="game_list clear">
+                <li class="active lf">最新</li>
+                <li class="lf">新手</li>
+                <li class="lf">式神</li>
+                <li class="lf">御魂</li>
+                <li class="lf">斗技</li>
+                <li class="lf">玩法</li>
+                <li class="lf">帮助</li>
+            </ul>
+        </div>
+        <!--游戏攻略详情-->
+        <div class="container_detail">
+            <!--<div class="list_detail">-->
+                <!--<div class="list_container">-->
+                    <!--&lt;!&ndash;左侧小type&ndash;&gt;-->
+                    <!--<div class="left_type"><a href="#">最新</a></div>-->
+                    <!--&lt;!&ndash;右侧详情&ndash;&gt;-->
+                    <!--<div class="right_detail">-->
+                        <!--<p class="p_title">-->
+                            <!--<a href="#">11-27 【NGA】被遗忘的R卡，古笼火在椒图阵容横行的现版本斗鸡使用心得分享</a>-->
+                        <!--</p>-->
+                        <!--<p class="p_info">-->
+                            <!--<a href="#">网易2016自研精品，唯美空灵的和风写意，经典的半即时回合制RPG，-->
+                                <!--卡牌收集、养成，基于LBS地理技术的社交PK，上百种式神亟待觉醒-->
+                            <!--</a>-->
+                        <!--</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+				<!--视频播放-->
+    <div class="container">
+        <a href="#modal-login"data-toggle="modal"class="btn_clear"><img src="img/game_str/video4.png" alt=""></a>
+        <div id="modal-login"class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                        <span class="close"data-dismiss="modal">X</span>
+                        <h3 class="modal-title">
+                            <video id="v3"controls poster="img/game_str/video2.jpg"
+                                    preload="metadata"muted width="1000">
+                                    <source src="img/game_str/yys.mp4">
+                                    <source src="img/game_str/yys.wav">
+                                    <source src="img/game_str/yys.ogg">
+                                    您的浏览器版本过低，请升级
+                            </video>
+                        </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--<div class="game_video">
+            
+        </div>-->
+				 <!--动态加载页尾-->
+        <div id="footer"></div>
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/game_str.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+body{
+	background:#EFEFEF;
+}
+/*******导航条******/
+	/*****导航条左侧****/
+		div.register_main{
+			width:56%;
+			margin:70px auto;
+			text-align:center;
+		}
+		p.nav_left>a>img{
+			height:100px;
+		}
+		p.nav_left>a>span{
+			font-size:33px;
+			color:#000;
+		}
+	/*****导航条右侧****/
+		p.nav_right{
+			padding-top:20px;
+		}
+		p.nav_right>span{
+			font-size:25px;
+		}
+		p.nav_right>span>a{
+			color:#CA5252;
+		}
+		p.nav_right>span>a:hover{
+			color:#AD4747;
+		}
+		
+/*********注册主体部分**********/
+	div.register_body{
+		background:#fff;
+		padding-bottom:40px;
+	}
+	div.register_body:before{
+		content:"";
+		display:table;
+	}
+	div.register_body>p{
+		margin:35px 0;
+		font-size:20px;
+	}
+	div.register_body>p>span{
+	display:inline-block;
+	width:150px;
+	height:52px;
+	text-align:right;
+	margin-left:-98px;
+	}
+	/*注册*/
+		p.register_number>a{
+			display:inline-block;
+			width:166px;
+			height:50px;
+			font-size:20px;
+			border:1px solid #ddd;
+			line-height:50px;
+			color:#666;
+		}
+		p.register_number>a:first-child{
+			color:#fff;
+			background:#CA5252;
+			margin-right:-6px;
+			margin-left:-10%;
+			border-right:0px;
+		}
+		p.register_number>a:first-child:hover{
+			cursor:default;
+		}
+	
+	div.register_body>p>input{
+		width:332px;
+		height:52px;
+		font-size:20px;
+		color:#C3BDBD;
+		padding-left:16px;
+		box-sizing:border-box;
+	}
+	/*****注册按钮******/
+		p.register_do>a.register_btn{
+			display:inline-block;
+			width:332px;
+			height:52px;
+			text-align:center;
+			line-height:52px;
+			background:#DF9696;
+			opacity:0.5;
+			color:#fff;
+			font-size:20px;
+			border-radius:5px;
+			margin-left:-106px;
+		}
+		p.register_do>a.register_btn:hover{
+			cursor:pointer;
+		}
+		div.register_body>p.register_do{
+			margin-bottom:12px;
+		}
+	/********同意********/
+		div.register_body>div.register_ok>div.register_agree>input{
+			width:20px;
+			height:20px;
+		}
+		div.register_body>div.register_ok>div.register_agree{
+			width:332px;
+		  height:52px;
+			font-size:16px;
+			color:#666;
+			margin-left:30%;
+			text-align:left;
+		}
+		div.register_body>div.register_ok>div.register_agree>a{
+			color:#666;
+		}
+		div.register_body>div.register_ok>div.register_agree>a:hover{
+			color:#000;
+		}
+		/*****背景图****/
+			div.register_back{
+				margin:60px 0;
+			}
+/*********底部**********/
+	div.footer_nav{
+		margin:30px 0;
+	}
+	div.footer_nav>ul.footer_list{
+		padding-left:18%;
+	}
+	div.footer_nav>ul.footer_list>li{
+		float:left;
+		color:#666;
+	}
+	div.footer_nav>ul.footer_list>li>a{
+		color:#666;
+	}
+	div.footer_nav>ul.footer_list>li>a:hover{
+		color:#EE8C18;
+	}
+	div.footer_nav>p{
+		margin-top:10px;
+		color:#666;
+	}
+
+
+	/**********************/
+		div.register_body>p>span.show{
+			font-size:14px;
+			margin-left:0px;
+			text-align:left;
+			color:red;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

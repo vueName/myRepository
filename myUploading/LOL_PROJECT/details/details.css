@@ -1,0 +1,134 @@
+#details{
+	width:1240px;
+	margin:0 auto;
+	margin-bottom:100px;
+}
+/*主体标题*/
+#details div.title{
+	font-size:16px;
+	height:23px;
+	line-height:23px;
+	margin:50px 0;
+}
+#details div.title a{
+	color:#333;
+	border-bottom:1px dashed #000;
+}
+#details div.title a:hover{
+	border-bottom:1px solid #000;
+}
+#details div.title span{
+	color:#666;
+}
+#details div.title b{
+	color:#B7B7B7;
+	margin:0 5px;
+}
+#details div.title img{
+	
+	margin-right:5px;
+}
+/*英雄/物品*/
+div.content{
+	border:1px solid #E1E1E1;
+}
+
+div.content ul.change{
+	box-sizing:border-box;
+	height:53px;
+	background:#F0F0F0;
+	border-top:4px solid #D7D7D7;
+}
+div.content ul.change li{
+	position:relative;
+	z-index:10;
+	border-top:4px solid transparent;
+	font-size:16px;
+	text-align:center;
+	height:53px;
+	box-sizing:border-box;
+	top:-4px;
+}
+div.content ul.change li a{
+	color:#525252;
+	display:block;
+	width:160px;
+	height:49px;
+	line-height:49px;
+	
+}
+div.content ul.change li:hover a{
+	color:#00A383;
+
+}
+div.content ul.change li:hover{
+	border-top:4px solid #00A383;
+}
+
+/*单选按钮/搜索框*/
+div.select{
+	display:flex;
+	justify-content:space-between;
+}
+div.select p.left{
+	width:820px;
+}
+div.select p.right{
+	width:302px;
+}
+div.content_details{
+	padding:30px;
+}
+div.select p.right input{
+	width:302px;
+	height:42px;
+	outline:none;
+}
+/*全部英雄*/
+div.content_details ul li{
+	width:90px;
+	height:104px;
+	font-size:12px;
+	text-align:center;
+	box-sizing:border-box;
+	padding-top:12px;
+}
+div.content_details ul li img{
+	width:66px;
+}
+div.content_details ul li a{
+	color:#333;
+}
+
+div.content_details ul li p{
+	margin-top:5px;
+}
+div.content_details ul{
+	display:flex;
+	justify-content:space-between;
+	margin-bottom:15px;
+}
+div.content_details ul li:hover p{
+	color:#00A383;
+}
+div.content_details ul.list11{
+	width:817px;
+}
+
+#list_container{
+	position:relative;
+	width:1177.59px;
+	height:1293.86px;
+}
+#list_container div{
+	width:1177.59px;
+	height:1293.86px;
+	position:absolute;
+}
+#list_container div{
+	display:none;
+}
+#list_container div:first-child{
+	display:block;
+}
+

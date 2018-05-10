@@ -1,0 +1,109 @@
+/*******游戏攻略导航图*******/
+    div.nav_line{
+        margin-top:30px;
+    }
+    div.nav_line>p{
+        text-align: center;
+    }
+/*******游戏攻略导航栏**********/
+    div.game_nav{
+        margin-top:20px;
+        border-bottom:1px solid #E2E2E2;
+        padding-bottom: 22px;
+    }
+    div.game_nav>ul{
+       display: flex;
+       justify-content: center;
+    }
+    div.game_nav>ul>li{
+        width:106px;
+        height:30px;
+        text-align:center;
+        line-height:30px ;
+        font-size:20px;
+    }
+    div.game_nav>ul>li.active{
+        color:#D2598A;
+    }
+    div.game_nav>ul>li:hover{
+        color:#D2598A;
+        cursor:pointer;
+    }
+
+/**********攻略详情**********/
+    div.list_detail{
+        border-bottom:1px solid #F2F2F2;
+    }
+    div.list_detail:hover{
+        background: #E1F1E7;
+    }
+    div.list_container{
+        width:55%;
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+        padding:34px 0;
+    }
+    /********左侧小type******/
+        div.left_type{
+            width:84px;
+            height:37px;
+            border-radius:30px;
+            background: #E5F2E9;
+            text-align: center;
+            line-height: 37px;
+            font-size: 20px;
+        }
+        div.list_detail:hover div.left_type{
+            background: #fff;
+        }
+        div.left_type>a{
+            color:#333;
+            display:inline-block;
+            width:100%;
+            height:100%;
+        }
+
+    /********右侧title及详情********/
+        div.right_detail{
+            margin-left:30px;
+        }
+        div.right_detail>p.p_title>a{
+            color:#444;
+            font-size:22px;
+        }
+        div.right_detail>p.p_info>a{
+            color:#7D7D7D;
+            font-size:16px;
+        }
+        div.right_detail>p.p_info{
+             margin-top: 10px;
+            line-height: 25px;
+         }
+/**********游戏视频***********/
+div.container{
+	margin:20px auto;
+	padding-left:77px;
+}
+div.modal-content{
+		width:1900px;
+		height:900px;
+		background:rgba(0,0,0,0.3);
+		margin-left:-110%;
+		/*padding-top:10%*/
+		position:relative;
+        top:-29px;
+}
+div.modal-content>span{
+	position:absolute;
+	right:21%;
+	top:9%;
+	font-size:50px;
+}
+h3.modal-title{
+	text-align:center;
+	margin-top:7%;
+}
+#footer{
+	margin-top:90px;
+}

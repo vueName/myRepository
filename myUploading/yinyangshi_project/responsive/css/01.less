@@ -1,0 +1,14 @@
+//单行注释
+/*多行注释*/
+
+//1、less变量
+@jdRed:#e4393c;
+@thinBorder:3px;
+@halfOpacity:0.6;
+@baseFont:'SimHei';
+@normalBorderStyle:solid;
+.box{
+  font:@baseFont;
+  background:rgba(0,0,0,@halfOpacity);
+  border:@thinBorder @normalBorderStyle @jdRed;
+}

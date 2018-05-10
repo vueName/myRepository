@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+		<head>
+			<meta charset="utf-8">
+			<title></title>
+			<style>
+				figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after {
+	position: absolute;
+	content: '';
+	opacity: 0;
+}
+
+figure.effect-layla figcaption::before {
+	top: 50px;
+	right: 30px;
+	bottom: 50px;
+	left: 30px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+figure.effect-layla figcaption::after {
+	top: 30px;
+	right: 50px;
+	bottom: 30px;
+	left: 50px;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	transform: scale(1,0);
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+
+
+figure.effect-layla img,
+figure.effect-layla figcaption::before,figure.effect-layla figcaption::after,
+figure.effect-layla p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+
+
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+
+
+			</style>
+		</head>
+		<body>
+			<div class="effect-layla">
+				<img src="img/3.jpg" alt="img03"/>
+				<div>
+					
+				</div>
+			</div>
+		</body>
+</html>

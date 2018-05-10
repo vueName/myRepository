@@ -1,0 +1,69 @@
+/*pc设备*/
+body{
+    margin:0;
+    background: #fff;
+    font-size:1em;
+}
+.container{
+    margin:0 auto;
+}
+.container:before{
+    content:'';
+    display:table;
+}
+.container-fluid{
+    width:100%;
+}
+.side_left,.side_center,.side_right{
+    float:left;
+}
+.my-img{
+    float:left;
+}
+.detail{padding-top:110px;}
+/*pc设备*/
+@media screen and (min-width: 992px) {
+    .container{width:970px;color:red}
+    .side_left{
+        width:20%;
+        background: purple;
+    }
+    .side_center{
+        width:60%;
+    }
+    .side_right{
+        width:20%;
+        background: indianred;
+    }
+    .my-img{width:25%;}
+}
+/*pad设备*/
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .container{width:750px;color:green;}
+    .side_left{
+        width:25%;
+        background: purple;
+    }
+    .side_center{
+        width:75%;
+    }
+    .side_right{
+        display:none;
+    }
+    .my-img{width:25%;}
+}
+/*phone设备*/
+@media screen and (max-width: 767px){
+    .container{width:100%;color:blue;}
+    .side_left{
+        width:100%;
+        background: purple;
+    }
+    .side_center{
+        width: 100%;
+    }
+    .side_right{
+       display:none;
+    }
+    .my-img{width:50%;}
+}

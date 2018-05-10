@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/login.css">
+	</head>
+	<body>
+		<div class="main">
+			<!--登录页顶部导航-->
+			<div class="login_nav">
+				<a href="index.html"><img src="img/login/logo.png" alt=""></a>
+				<span class="span">|</span>
+				<span>登录</span>
+			</div>
+			<!--登录页主体内容-->
+			<div class="login_main">
+				<!--左侧大广告-->
+				<div class="left_adver">
+					<a href="#"><img src="img/login/1.png" alt=""></a>
+				</div>
+				<!--右侧登录框-->
+				<div class="right_login">
+					<!--登录选择栏-->
+					<p class="login_change">
+						<span class="change_one">普通登录</span>
+						<span class="change_two">二维码登录</span>
+					</p>
+					<div class="login_detail">
+						<!--普通登录-->
+						<div class="login_common">
+							<p class="login_account">
+								<span>账号：</span>
+								<input type="text"id="account"placeholder="请输入账号">
+								<span id="show_msg1"></span>
+							</p>
+							<p class="login_pass">
+								<span>密码：</span>
+								<input type="password"id="upwd"placeholder="请输入密码">
+								<span id="show_msg2"></span>
+							</p>
+							<p class="login_rem">
+								<span>自动登录：</span>
+								<input type="checkbox"value="0"class="check_box">
+
+							</p>
+							<!--登录板块-->
+							<p class="login_btn">
+								<a class="login_button"id="btn">登录</a>
+							</p>
+						</div>
+						<!------二维码登录------->
+						<div class="login_code">
+							<p class="login_scan">
+								<span class="scan_info">
+									使用 <a href="#">网易帐号管家</a> 或 <a href="#">邮箱大师</a> 扫一扫快速登录
+								</span>
+							</p>
+							<!--二维码图案-->
+							<p class="code_pic">
+								<img src="img/login/2.png" alt=""width="188px">
+							</p>
+						</div>
+						
+						
+					</div>
+					<!--关于-->
+					<p class="about_me">
+						<a href="#">忘记密码？</a>
+						<span>|</span>
+						<a href="register.html">注册</a>
+						<span>|</span>
+						<a href="#">关于网易邮箱账号</a>
+					</p>
+					<!--公告--->
+					<p class="login_notice">
+						<a href="#">公告：网易邮箱账号升级公告</a>
+					</p>
+					
+				</div>
+			</div>
+			<!--登录页底部-->
+			<div class="steward">
+				<ul class="steward_detail clear">
+					<li class="li_more">
+						<a href="#"class="clear">
+							<img src="img/login/3.png" alt=""class="lf">
+							<span class="span_fir f"> 网易帐号管家</span>
+							<span>帐号保护神器，有效防止被盗</span>
+						</a>
+					</li>
+					<li>
+						<a href="#"class="clear">
+							<img src="img/login/4.png" alt=""class="lf">
+							<span class="span_f00 f">找回密码</span>
+							<span>多种方式快速找回密码</span>
+						</a>
+					</li>
+					<li>
+						<a href="#"class="clear">
+							<img src="img/login/5.png" alt=""class="lf">
+							<span class="span_f00 f"> 锁定帐号</span>
+							<span>禁止登录，防止帐号被盗</span>
+						</a>
+					</li>
+					<li class="li_more">
+						<a href="#"class="clear">
+							<img src="img/login/6.png" alt=""class="lf">
+							<span class="span_fii f">帐号中心公众版</span>
+							<span>帐号相关资讯公示平台</span>
+						</a>
+					</li>
+					<li>
+						<a href="#"class="clear">
+							<img src="img/login/7.png" alt=""class="lf">
+							<span class="span_f00 f"> 帐号修复</span>
+							<span>通过客服解决帐号问题</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--底部链接-->
+				<div class="footer_nav">
+					<ul class="footer_list clear">
+						<li><a href="#">About NetEase</a> -</li>
+						<li><a href="#"> &nbsp;公司简介</a> -</li>
+						<li><a href="#"> &nbsp;联系方式</a> -</li>
+						<li><a href="#"> &nbsp;OAuth2.0认证</a> -</li>
+						<li><a href="#"> &nbsp;招聘信息</a> -</li>
+						<li><a href="#"> &nbsp;客户服务</a> -</li>
+						<li><a href="#"> &nbsp;相关法律</a> -</li>
+						<li><a href="#"> &nbsp;网络营销</a></li>
+					</ul>
+					<p>网易公司版权所有 ©1997-2017</p>
+				</div>
+		</div>
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/login.js"></script>
+	</body>
+</html>

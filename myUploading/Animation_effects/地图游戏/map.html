@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>迷宫小游戏</title>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        canvas{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+               -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                 -o-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <canvas width="550" height="555" id="canvas"></canvas>
+    <script>
+        (function () {
+            //初始化变量
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            var currRectX = 425;
+            var currRectY = 3;
+            var mazeWidth = 550;
+            var mazeHeight = 555;
+            var intervalVar;
+
+            //绘制迷宫、可移动矩形、终点圆形坐标函数
+            function drawMazeAndRectangle(rectX, rectY) {
+                //创建白色矩形覆盖
+                makeWhite(0, 0, canvas.width, canvas.height);
+                //迷宫图像对象
+                var mazeImg = new Image();
+                //迷宫图加载完成执行函数
+                mazeImg.onload = function() {
+                    //绘制迷宫
+                    context.drawImage(mazeImg, 0, 0);
+                    //绘制可移动矩形
+                    drawRectangle(rectX, rectY, "#0000FF");
+                    //终点圆形坐标
+                    context.beginPath();
+                    context.arc(20, 115, 7, 0, 2 * Math.PI, false);
+                    context.closePath();
+                    context.fillStyle = '#00FF00';
+                    context.fill();
+                    //提示文字
+                    context.font = "14px Microsoft JhengHei";
+                    context.fillStyle = "tomato";
+                    context.textAlign = "center";
+                    context.textBaseline = "middle";
+                    context.fillText("点击 Cnavas 重置游戏", canvas.width / 2, 10);
+                };
+                mazeImg.src = "maze2.gif";  //迷宫图
+            }
+
+            //绘制可移动矩形函数
+            function drawRectangle(x, y, style) {
+                makeWhite(currRectX, currRectY, 13, 13);
+                currRectX = x;
+                currRectY = y;
+                context.beginPath();
+                context.rect(x, y, 13, 13);
+                context.closePath();
+                context.fillStyle = style;
+                context.fill();
+            }
+
+            //移动矩形函数
+            function moveRect(e) {
+                var newX;
+                var newY;
+                var movingAllowed;
+                e = e || window.event;
+                switch (e.keyCode) {
+                    case 38:    //方向键 up
+                    case 87:    //W 键
+                        newX = currRectX;
+                        newY = currRectY - 3;
+                        break;
+                    case 37:    //方向键 left
+                    case 65:    //A 键
+                        newX = currRectX - 3;
+                        newY = currRectY;
+                        break;
+                    case 40:    //方向键 down
+                    case 83:    //S 键
+                        newX = currRectX;
+                        newY = currRectY + 3;
+                        break;
+                    case 39:    //方向键 right
+                    case 68:    //D 键
+                        newX = currRectX + 3;
+                        newY = currRectY;
+                        break;
+                }
+                //判断矩形是否可移动或到达终点
+                movingAllowed = canMoveTo(newX, newY);
+                
+                if (movingAllowed === 1) {                  //1 矩形可移动
+                    drawRectangle(newX, newY, "#0000FF");   //绘制矩形的新位置
+                    //更新可移动矩形坐标
+                    currRectX = newX;
+                    currRectY = newY;
+                } else if (movingAllowed === 2) {           //2 矩形到达终点
+                    clearInterval(intervalVar);             //停止倒计时
+                    makeWhite(0, 0, canvas.width, canvas.height);
+                    //游戏结束后绘制显示文本内容
+                    context.font = "40px Microsoft JhengHei";
+                    context.fillStyle = "tomato";
+                    context.textAlign = "center";
+                    context.textBaseline = "middle";
+                    context.fillText("恭喜你走出迷宫!", canvas.width / 2, canvas.height / 2);
+                    //移除监听 keydown 事件
+                    window.removeEventListener("keydown", moveRect, true);
+                }
+            }
+
+            //矩形移动判断函数
+            function canMoveTo(destX, destY) {
+                //获取图像数据
+                var imgData = context.getImageData(destX, destY, 13, 13);
+                var data = imgData.data;
+                var canMove = 1;            //1矩形可以移动
+                if (destX >= 0 && destX <= mazeWidth - 13 && destY >= 0 && destY <= mazeHeight - 13) {
+                    for (var i = 0; i < 4 * 13 * 13; i += 4) {
+                        if (data[i] === 0 && data[i + 1] === 0 && data[i + 2] === 0) {          //黑色位置不能移动
+                            canMove = 0;    //0矩形不能移动
+                            break;
+                        } else if (data[i] === 0 && data[i + 1] === 255 && data[i + 2] === 0) { //绿色（#00FF00 也就是RGB 0 255 0）位置到达终点
+                            canMove = 2;    //2达到终点
+                            break;
+                        }
+                    }
+                } else {
+                    canMove = 0;
+                }
+                return canMove;
+            }
+
+            //游戏时间函数
+            function createTimer(seconds) {
+                intervalVar = setInterval(function() {
+                    //用白色清空时间部分
+                    makeWhite(0, mazeHeight - 20, canvas.width, 20);
+                    //如果时间等于0，结束游戏
+                    if (seconds === 0) {
+                        clearInterval(intervalVar);
+                        window.removeEventListener("keydown", moveRect, true);
+                        makeWhite(0, 0, canvas.width, canvas.height);
+                        context.font = "40px Microsoft JhengHei";
+                        context.fillStyle = "red";
+                        context.textAlign = "center";
+                        context.textBaseline = "middle";
+                        context.fillText("Game Over", canvas.width / 2, canvas.height / 2);
+                        return;
+                    }
+                    //颜色预警，当时间小于一定数值，改变颜色
+                    context.font = "24px Microsoft JhengHei";
+                    if (seconds <= 10 && seconds > 5) {
+                        context.fillStyle = "orangered";
+                    } else if (seconds <= 5) {
+                        context.fillStyle = "red";
+                    } else {
+                        context.fillStyle = "green";
+                    }
+                    context.textAlign = "center";
+                    context.textBaseline = "middle";
+                    var minutes = Math.floor(seconds / 60);
+                    var secondsToShow = (seconds - minutes * 60).toString();
+                    if (secondsToShow.length === 1) {
+                        secondsToShow = "0" + secondsToShow;    //在秒数前加 0 如：5 秒则显示 05
+                    }
+                    context.fillText(minutes.toString() + ":" + secondsToShow, canvas.width / 2, mazeHeight - 10);
+                    seconds--;
+                }, 1000);
+            }
+
+            //创建白色矩形函数
+            function makeWhite(x, y, w, h) {
+                context.beginPath();
+                context.rect(x, y, w, h);
+                context.closePath();
+                context.fillStyle = "white";
+                context.fill();
+            }
+
+            //点击 Canvas 重新开始游戏
+            function init(){
+                //绘制迷宫和矩形函数，传参值是矩形位置
+                drawMazeAndRectangle(342, 20);
+                //监听键盘按键，并移动矩形
+                window.addEventListener("keydown", moveRect, true);
+                clearInterval(intervalVar);
+                createTimer(120);    //设定游戏倒计时秒数
+            }
+            canvas.onclick = init;
+            init();
+        })();
+    </script>
+</body>
+</html>

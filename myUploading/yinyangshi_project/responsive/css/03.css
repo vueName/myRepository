@@ -1,0 +1,24 @@
+/*pc设备*/
+@media screen and (min-width: 992px) {
+    body{
+        background:#fff;
+        color:red;
+        font-size:16px;
+    }
+}
+/*pad设备*/
+@media screen and (min-width: 768px) and (max-width: 991px){
+    body{
+        background:#fff;
+        color:blue;
+        font-size:14px;
+    }
+}
+/*phone设备*/
+@media screen and (max-width: 767px){
+    body{
+        background:#fff;
+        color:green;
+        font-size:12px;
+    }
+}

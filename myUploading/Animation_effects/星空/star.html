@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>星空</title>
+  <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #starrynight {
+        background: -webkit-linear-gradient(#00111e 30%, #033d5e);
+        background:    -moz-linear-gradient(#00111e 30%, #033d5e);
+        background:     -ms-linear-gradient(#00111e 30%, #033d5e);
+        background:      -o-linear-gradient(#00111e 30%, #033d5e);
+        background:         linear-gradient(#00111e 30%, #033d5e);
+        overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+    <canvas id="starrynight"></canvas>
+    <script>
+        function drawing() {
+            var c = document.getElementById('starrynight');
+            var ctx = c.getContext('2d');
+            var xMax = c.width = window.screen.availWidth;              //获取浏览器的屏幕的可用宽度
+            var yMax = c.height = window.screen.availHeight;            //获取浏览器的屏幕的可用高度
+
+            var hmTimes = Math.round(xMax + yMax);                      //获得 int 四舍五入(绘制星星数量)
+            
+            for(var i = 0; i <= hmTimes; i++) {
+                var randomX = Math.floor((Math.random()*xMax)+1);       //绘制矩形的X坐标（1-xMax的随机数）
+                var randomY = Math.floor((Math.random()*yMax)+1);       //绘制矩形的Y坐标（1-yMax的随机数）
+                var randomSize = Math.floor((Math.random()*2)+1);       //星星大小（1-2随机数）
+                var randomOpacityOne = Math.floor((Math.random()*9)+1); //随机1-9透明度值
+                var randomOpacityTwo = Math.floor((Math.random()*9)+1); //随机1-9透明度值
+                var randomHue = Math.floor((Math.random()*360)+1);      //随机1-360颜色值
+                //大于1添加阴影
+                if(randomSize > 1) {
+                    ctx.shadowBlur = Math.floor((Math.random()*15)+5);  //阴影，随机5-15
+                    ctx.shadowColor = "white";                          //阴影颜色，白色
+                }
+                ctx.fillStyle = "hsla("+randomHue+", 30%, 80%, ."+randomOpacityOne+randomOpacityTwo+")";    //hsla 颜色设置（a是透明度）
+                ctx.fillRect(randomX, randomY, randomSize, randomSize); //绘制矩形
+            }
+        }
+        drawing();
+    </script>
+</body>
+</html>

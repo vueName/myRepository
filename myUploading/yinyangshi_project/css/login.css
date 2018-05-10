@@ -1,0 +1,205 @@
+/*****页面顶部导航*****/
+	div.login_nav{
+		padding-left:15%;
+	}
+	div.login_nav>span.span{
+		display:inline-block;
+		color:#DFDFDF;
+		font-size:25px;
+		margin:0 7px;
+
+	}
+	div.login_nav>span:last-child{
+		color:#000;
+		font-size:25px;
+		display:inline-block;
+		height:50px;
+		line-height:50px;
+	}
+/*****页面主体内容*******/
+	div.login_main{
+		background:#39A6EC;
+		position:relative;
+	}
+	/*****左侧大广告*****/
+		div.left_adver{
+			padding-left:15%;	
+		}
+	/*****右侧登录框***********/
+		div.right_login{
+			width:25%;
+			height:420px;
+			position:absolute;
+			background:#E2F2FC;
+			border:1px solid #3AA7EC;
+			top:10%;
+			left:50%;
+		}
+
+		/******登录选择栏*******/
+			p.login_change>span{
+				display:inline-block;
+				width:235px;
+				box-sizing:border-box;
+				text-align:center;
+				font-size:20px;
+				padding:10px 0;
+			}
+			p.login_change>span:hover{
+				cursor:pointer;
+			}
+			p.login_change>span.change_two{
+				background:#89CAF4;
+			}
+
+		/*******登录详情块*********/
+			div.login_detail{
+				position:relative;
+				border:1px solid transparent;;
+				width:80%;
+				height:63%;
+				margin:0 auto;
+			}
+			/******普通登录********/
+			div.login_common{
+				position:absolute;
+			}
+			div.login_common>p{
+				margin:12px 32px;
+				font-size:20px;
+			}
+			/*******输入框下方显示的文字*******/
+			p.login_account>#show_msg1{
+				display:inline-block;
+				margin-left:72px;
+				margin-top:10px;
+				color:red;
+				font-size:14px;
+			}
+			p.login_pass>#show_msg2{
+				display:inline-block;
+				margin-left:72px;
+				margin-top:10px;
+				color:red;
+				font-size:14px;
+			}
+			div.login_common>p>input{
+				height:45px;
+				width:250px;
+				padding-left:5px;
+				box-sizing:border-box;
+			}
+			/******自动登录复选框*********/
+				div.login_common>p.login_rem{
+					height:40px;
+				}
+				div.login_common>p.login_rem>input.check_box{
+					width:20px;
+					height:20px;
+				}
+			 /******登录按钮******/
+				p.login_btn>a.login_button{
+					display:inline-block;
+					background:#79B1D5;
+					width:100%;
+					text-align:center;
+					padding:7px 0;
+					color:#fff;
+					margin-top:-3px;
+				}
+				p.login_btn>a.login_button:hover{
+					cursor:pointer;
+				}
+			/******二维码登录********/
+			div.login_code{
+				position:absolute;
+				display:none;
+			}
+			div.login_code>p{
+				text-align:center;
+				margin:18px 10px;
+			}
+
+			div.login_code>p.login_scan>span>a{
+				color:#406EC8;EE8C18
+			}
+			div.login_code>p.login_scan>span>a:hover{
+				color:#EE8C18;
+			}
+
+
+			/*******底部公告******/
+				p.about_me,p.login_notice{
+					margin:17px auto;
+					padding-left:17%;
+					color:#CFCED6;
+				}
+				p.about_me>a{
+					color:#406EBA;
+					font-size:14px;
+				}
+				p.about_me>a:hover{
+					color:#EE8C18;
+				}
+				p.login_notice>a{
+					color:#FF0000;
+				}
+	/************登录页底部管家*************/
+		div.steward>ul.steward_detail{
+			padding-left:21%;
+			margin-top:50px;
+		}
+		div.steward>ul.steward_detail>li{
+			float:left;
+			width:200px;
+			margin-right:20px;
+		}
+		div.steward>ul.steward_detail>li span:last-child{
+			font-size:12px;
+			color:#B9B9B9;
+		}
+		div.steward>ul.steward_detail>li>a{
+			display:inline-block;
+			box-sizing:border-box;
+		}
+		div.steward>ul.steward_detail>li>a:hover span.f{
+			color:#EE8C18;
+		}
+		ul.steward_detail span.span_fir{
+			padding-right:17px;
+			color:#333;
+		}
+
+		ul.steward_detail span.span_f00{
+			padding-right:47px;
+			color:#333;
+		}
+		
+		ul.steward_detail span.span_fii{
+			padding-right:12px;
+			color:#333;
+		}
+/*********底部**********/
+	div.footer_nav{
+		margin:50px 0;
+	}
+	div.footer_nav>ul.footer_list{
+		padding-left:28%;
+	}
+	div.footer_nav>ul.footer_list>li{
+		float:left;
+		color:#666;
+	}
+	div.footer_nav>ul.footer_list>li>a{
+		color:#666;
+	}
+	div.footer_nav>ul.footer_list>li>a:hover{
+		color:#EE8C18;
+	}
+	div.footer_nav>p{
+		margin-top:10px;
+		color:#666;
+		padding-left:41%;
+	}
+	
+

@@ -1,0 +1,57 @@
+body{
+	background:#E9CFAD;
+}
+div.container{
+	margin:200px auto;
+	width:1200px;
+	height:600px;
+	background:url("../img/big157001.jpg") no-repeat;
+	
+	background-size:cover;
+	border:1px solid #E9CFAD;
+}
+div.main{
+	width:800px;
+	margin:100px auto;
+	font-size:20px;
+	padding:40px 0px 40px 20px;
+	color:#fff;
+	}
+div.main p{
+	margin-bottom:35px;
+}
+div.main p input{
+	width:200px;
+	height:30px;
+	font-size:16px;
+	/*opacity:0.5;*/
+	background-color:transparent;
+	outline:none;
+	color:#fff;
+}
+div.main p input::-webkit-input-placeholder{
+	color:#fff;
+	text-align:center;
+}
+div.main button.btn{
+	border:none;
+	padding:0px;
+	margin-top:20px;
+}
+div.main button.btn a{
+	width:312px;
+	height:40px;
+	line-height:40px;
+	display:block;
+	font-size:16px;
+	text-decoration:none;
+	color:#fff;
+	background-image:linear-gradient(to bottom,#31B0D5,#31B0D5);
+}
+div.main button.btn:hover{
+	cursor:pointer;
+}
+div.main p span{
+	font-size:16px;
+	margin-left:22px;
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/login.css">
+	</head>
+	<body>
+	<div class="container">
+		<div class="main">
+			<p>
+				用户名称：
+				<input type="text"id="uname"placeholder="请输入用户名"onblur="load_uname()">
+				<span id="show_uname"></span>
+			</p>
+				<p>
+				用户密码：
+				<input type="password"id="upwd"placeholder="请输入密码"onblur="load_upwd()">
+				<span id="show_upwd"></span>
+		  </p>
+		  <button onclick="login()"class="btn"><a>登录</a></button>
+		</div>
+	</div>
+		
+		
+		<script src="common.js"></script>
+		<script>
+			function load_uname(){
+				if($("uname").value==""){
+					$("show_uname").innerHTML="用户名不能为空";
+				}
+			}
+			function load_upwd(){
+				if($("upwd").value==""){
+					$("show_upwd").innerHTML="密码不能为空";
+				}
+			}
+			function login(){
+				var xhr=createXhr();
+				xhr.open("post","login.php",true);
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4&&xhr.status==200){
+						var res=xhr.responseText;
+						//console.log(res);
+						if(res==1){
+							alert("登录成功");
+							location.href="../zhuye/guanwang.html";
+						}else{
+							alert("登录失败，用户名或密码错误");
+						}
+					}
+				}
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				var msg="uname="+$("uname").value+"&upwd="+$("upwd").value;
+				xhr.send(msg);
+			}
+		</script>
+	</body>
+</html>

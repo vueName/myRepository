@@ -1,0 +1,170 @@
+body,ul{
+	margin:0px;
+}
+div.main{
+	margin:0 auto;
+	width:1900px;
+}
+
+
+/*顶部的头部样式*/
+#header{
+	height:100px;
+	width:1900px;
+	background-color:#0B0B0B;
+}
+#header #container{
+	width:1200px;
+	margin:auto;
+}
+/*#header #container.clear:after{
+	content:"";
+	display:block;
+	clear:both;
+}*/
+#container #logo,#login>#log{
+	float:left;
+	height:100px;
+	line-height:100px;
+}
+#container #nav{
+	float:left;
+	height:100px;
+}
+
+#container #nav #list{
+	height:100px;
+	line-height:100px;
+}
+#container #nav #list a{
+	text-decoration:none;
+	font-size:25px;
+	color:#FAFAFA;
+	margin-left:20px;
+}
+
+#container #login img{
+	vertical-align:middle;
+}
+#container #login #log{
+	color:#FAFAFA;
+	font-size:20px;
+}
+#container #login span a{
+	color:#DFB257;
+}
+#container #nav,#login{
+	position:relative;
+}	
+
+/*导航弹出框*/
+#dialog ul{
+	float:left;
+	margin-top:34px;
+}
+#dialog{
+	position:absolute;
+	height:200px;
+	width:1900px;
+	font-size:15px;
+	background-color:rgba(0,0,0,0.6);
+	margin-top:-7px;
+	left:-508px;
+	display:none;
+}
+#dialog #posi{
+	height:200px;
+	width:884px;
+	margin:auto;
+}
+#dialog #posi a{
+	text-decoration:none;
+	color:#FAFAFA;
+}
+#dialog #posi a:hover{
+	color:#E2C88C;
+}
+
+#container #nav:hover #dialog{
+	display:block;
+}
+/*登录弹出框*/
+#login #fle{
+
+	position:absolute;
+	width:338px;
+	height:126px;
+	right:73px;
+	top:100px;
+	background:rgba(24,26,27,0.6);
+	color:#868686;
+	font-size:14px;
+	display:none;
+}
+#login #fle a{
+	text-decoration:none;
+	color:#FAFAFA;
+	font-size:12px;
+}
+#login #fle p{
+	margin:12px 25px 20px;
+	color:#868686;
+}
+
+#login #fle div{
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	margin-top:35px;
+	background:rgba(22,20,19,0.6);
+}
+#container #login:hover #fle{
+	display:block;
+}
+
+
+
+
+
+
+/*头部大图*/
+#head{
+	width:1900px;
+	height:350px;
+	background:red url("img/pic-back-v13.jpg") no-repeat;
+
+}
+#head #detail{
+	color:#F5D176;
+	position:relative;
+	left:69%;
+	top:84%;
+}
+#head #detail a{
+	text-decoration:none;
+	color:#F5D176;
+	border:2px solid #6C5124;
+}
+
+
+/*底部的页脚样式*/
+footer{
+	height:157px;
+	background-image:url("img/bg-footer.jpg");
+	color:#A5A5A5;
+	font-size:15px;
+	
+}
+footer ul{
+	position:relative;
+	right:-50%;
+	bottom:-17%;
+}
+footer a{
+	text-decoration:none;
+	color:#568193;
+}
+footer li.link{
+	color:#415967;
+}
+

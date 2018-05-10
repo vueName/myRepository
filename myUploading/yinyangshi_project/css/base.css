@@ -1,0 +1,39 @@
+div.main{
+	width:1900px;
+	margin:0 auto;
+}
+p,ul,ol,dl,dd,li,h1,h2,h3,h4,h5,body{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+img{
+	vertical-align:middle;
+}
+a,a:hover{
+	text-decoration:none;
+}
+
+.lf{
+	float:left;
+}
+.rt{
+	float:right;
+}
+.add:before{
+	content:"";
+	display:table;
+}
+.clear:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+/*#header{
+	width:1900px;
+	height:450px;
+}
+#footer{
+	width:1900px;
+	height:160px;
+}*/

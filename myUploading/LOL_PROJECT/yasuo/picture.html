@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@keyframes action{
+				0%{
+					transform:translate(0);
+				}
+				50%{
+					transform:translate(-5040px);
+				}
+				100%{
+					transform:translate(0px);
+				}
+			}
+			#d1{
+				width:1240px;
+				height:632px;
+				border:1px solid #000;
+				overflow:hidden;
+			}
+			#d2{
+				width:7000px;
+				height:632px;
+				
+				animation:action 35s linear infinite;
+			}
+			img{
+				width:1240px;
+				
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<div id="d2">
+				<img src="img/big157000.jpg"id="img1">
+				<img src="img/big157001.jpg"id="img2">
+				<img src="img/big157002.jpg"id="img3">
+				<img src="img/big157003.jpg"id="img4">
+				<img src="img/big157009.jpg"id="img5">
+			</div>
+		</div>
+	</body>
+</html>

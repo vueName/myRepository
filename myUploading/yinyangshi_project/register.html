@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/register.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="register_main">
+				<!-- 头部导航条 -->
+				<div class="nav clear">
+					<p class="nav_left lf">
+						<a href="index.html">
+							<img src="img/register/2.png" alt="">
+							<span>邮箱账号</span>
+						</a>
+					</p>
+					<p class="nav_right rt">
+						<span>已有账号？去<a href="login.html">登录</a></span>
+					</p>
+				</div>
+				<!-- 注册主体部分 -->
+				<div class="register_body">
+					<p class="register_number">
+						<a>普通账号注册</a>
+						<a href="#">靓号注册</a>
+					</p>
+					<!-- 账号 -->
+					<p class="register_account">
+						<span>账号：</span><input type="text"id="account"placeholder="网易邮箱/手机号/其它邮箱">
+					<span id="show_acc"class="show"></span>
+					</p>
+					<!-- 密码 -->
+					<p class="register_upwd">
+						<span>密码：</span><input type="password"id="upwd"placeholder="6-16位密码,区分大小写">
+						<span id="show_upwd"class="show"></span>
+					</p>
+					<!-- 确认密码 -->
+					<p class="register_cpwd">
+						<span>确认密码：</span><input type="password"id="cpwd"placeholder="再次输入密码">
+						<span id="show_cpwd"class="show"></span>
+					</p>
+					<!-- 验证码 -->
+					<p class="register_code">
+						<span>验证码：</span><input type="text"id="code1"placeholder="请输入验证码">
+						<span class="show"><img id="yzm1"src="php/03_code_gg.php" alt=""title="看不清点击换一张"></span>
+					</p>
+					<!-- 手机号 -->
+					<p class="register_phone">
+						<span>手机号：</span><input type="text"id="phone"placeholder="11位手机号">
+						<span id="show_phone"class="show"></span>
+					</p>
+					<!-- 短信验证码 -->
+					<p class="register_msg">
+						<span>短信验证码：</span><input type="text"id="code2"placeholder="输入短信验证码">
+						<span class="show"><img id="yzm2"src="php/04_code_gg.php" alt=""title="看不清点击换一张"></span>
+					</p>
+					<!-- 注册 -->
+					<p class="register_do"id="btn">
+						<a class="register_btn">注册</a>
+					</p>
+					<!-- 同意 -->
+					<div class="register_ok">
+						<div class="register_agree">
+							<input type="checkbox"value="0"id="agr_check">
+							用户勾选即代表同意<a href="#">《网易邮箱服务条款》</a>和<a href="#">《网易隐私政策》</a>
+						</div>
+					</div>
+					
+					<div class="register_back">
+						<a href="#"><img src="img/register/1.png" alt=""></a>
+					</div>
+				</div>
+				<!--底部链接-->
+				<div class="footer_nav">
+					<ul class="footer_list clear">
+						<li><a href="#">About NetEase</a> -</li>
+						<li><a href="#"> &nbsp;公司简介</a> -</li>
+						<li><a href="#"> &nbsp;联系方式</a> -</li>
+						<li><a href="#"> &nbsp;OAuth2.0认证</a> -</li>
+						<li><a href="#"> &nbsp;招聘信息</a> -</li>
+						<li><a href="#"> &nbsp;客户服务</a> -</li>
+						<li><a href="#"> &nbsp;相关法律</a> -</li>
+						<li><a href="#"> &nbsp;网络营销</a></li>
+					</ul>
+					<p>网易公司版权所有 ©1997-2017</p>
+				</div>
+			</div>
+			
+		</div>
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/register.js"></script>
+		<script src="js/bubbly_bg.js"></script>
+		<script>
+			bubbly({
+			colorStart:"#fff4e6",
+			colorStop:"#ffe9e4",
+			blur:1,
+			compose:"source-over",
+			bubbleFunc:()=>`hsla(${Math.random()*50},100%,50%,.3)`
+		});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,300 @@
+body{
+	margin:0px;
+}
+
+div.main{
+	width:1900px;
+	margin:0 auto;
+	background:#fffff0;
+}
+
+
+/*页面主体*/
+#t1{
+	margin-left:313px;
+	font-size:18px;
+	padding:10px;
+}
+p{
+	color:#333333;
+}
+#t1 img{
+	position:relative;
+	top:5px;
+}
+#t1 a{
+	text-decoration:none;
+	color:#333333;
+}
+#t1 a:hover{
+	text-decoration:underline;
+}
+/*大图容器#pic*/
+#main #pic{
+	width:1240px;
+	height:632px;
+	border:1px solid #E1E1E1;
+	margin-left:330px;
+	color:#FAFAFA;
+	position:relative;
+	/*overflow:hidden;*/
+}
+#pic #list{
+	margin:20px;
+	padding:10px;
+	position:absolute;
+	z-index:20;
+}
+#list table{
+	margin:10px 0 30px -5px;
+}
+#pic #bottom{
+	position:absolute;
+	right:10px;
+	bottom:2px;
+	z-index:20;
+}
+#pic #bottom img{
+	border:4px solid transparent;
+}
+/*#pic #bottom img:hover{
+	border:4px solid #00A483;
+	cursor:pointer;
+}*/
+#pic #big img{
+	width:1240px;
+	position:absolute;
+}
+#pic #big #img0{
+	z-index:5;
+}
+
+
+
+
+/*背景故事，详情，技能介绍*/
+#art1{
+	width:782px;
+	height:266px;
+	margin-left:330px;
+}
+#art1 header{
+	margin:30px 0 10px 0;
+	color:#338C8D;
+	font-size:20px;
+}
+#art1 #sec{
+	/*width:782px;*/
+	border:1px solid #E1E1E1;
+	color:#666666;
+	font-size:15px;
+	padding:20px;
+}
+#sec section{
+	margin:10px 0 20px 0;
+}
+#sec a{
+	text-decoration:none;
+	color:#999999;
+}
+#art2{
+	width:782px;
+	height:200px;
+	margin-left:330px;
+}
+#art2 header{
+	margin:50px 0 10px 0;
+	color:#338C8D;
+	font-size:20px;
+}
+#art2 #sec2{
+	height:90px;
+	border:1px solid #E1E1E1;
+	padding-left:30px;
+	color:#333333;
+}
+#art3{
+	width:782px;
+	height:500px;
+	margin-left:330px;
+}
+#art3 header{
+	margin:40px 0 10px 0;
+	color:#338C8D;
+	font-size:20px;
+}
+#art3 #equipment{
+	border:1px solid #E1E1E1;
+	height:480px;
+}
+#art3 #gorge{
+	/*color:#51BCC1;*/
+	text-align:center;
+	line-height:53px;
+	width:390px;
+	height:53px;
+	margin-top:0px;
+	float:left;
+}
+#art3 #polar{
+	text-align:center;
+	line-height:53px;
+	width:390px;
+	height:53px;
+	margin-top:0px;
+	float:right;
+	/*background-color:#F0F0F0;*/
+}
+#equipment header{
+	color:#338C7A;
+	font-size:15px;
+	margin:5px 0 5px 0;
+}
+#equipment section{
+	border-bottom:1px solid #EEEEEE;
+	margin:30px 30px 30px 30px;
+	padding-bottom:15px;
+}
+#switch_equip div.cont img{
+	margin-right:30px;
+}
+/*装备切换*/
+#equipment #switch_equip{
+	/*border:1px solid #000;*/
+	height:426px;
+	margin-top:53px;
+	position:relative;
+}
+#equipment #switch_equip div.cont{
+	position:absolute;
+	width:780px;
+}
+#equipment #switch_equip div.cont:first-child{
+	z-index:3;
+}
+#equipment #pattern:hover{
+	cursor:pointer;
+}
+
+
+#art4{
+	width:782px;
+	height:430px;
+	margin-left:330px;
+}
+#art4 #use{
+	margin:50px 0 10px 0;
+	color:#338C8D;
+	font-size:20px;
+}
+
+ #art4 #skills{
+	box-sizing:border-box;
+	border:1px solid #E1E1E1;
+	width:780px;
+	height:350px;
+	font-size:16px;
+	background:#FFFFFF;
+	padding:20px 20px 20px 10px;
+	color:#333333;
+}
+#skills header{
+	margin-left:37px;
+	color:#338C8D;
+}
+#section2 header{
+	border-top:1px solid #EEEEEE;
+}
+#side1{
+	width:419px;
+	height:80px;
+	position:absolute;
+	left:61%;
+	top:1168px;
+}
+div #side2{
+	border:1px solid #E1E1E1;
+	background:#FFFFFF;
+	padding:37px 40px 37px 15px;
+	font-size:13px;
+	color:#666666;
+}
+#side1 header{
+	margin:50px 0 10px 0;
+	color:#338C8D;
+	font-size:20px;
+}
+#side2 a{
+	text-decoration:none;
+	color:#00B7D0;
+}
+#side3{
+	width:419px;
+	height:900px;
+	position:absolute;
+	left:61%;
+	top:1380px;
+}
+#side3 #side4{
+	border:1px solid #E1E1E1;
+	background:#FFFFFF;
+	padding:10px 5px;
+	font-size:12px;
+	color:#9A9898;
+}
+#side3 header{
+	margin:12px 0 10px 0;
+	color:#338C8D;
+	font-size:20px;
+}
+#side3 header a{
+	text-decoration:none;
+	color:#999999;
+	font-size:14px;
+	float:right;
+}
+#side5 a{
+	text-decoration:none;
+	color:#555555;	
+	font-size:13px;
+}
+#side5 td.line{
+	border-bottom:1px solid #EAEAEA;
+}
+#side5 img{
+	position:relative;
+	top:2px;
+
+}
+footer{
+	height:157px;
+	width:1900px;
+	background-image:url("img/bg-footer.jpg");
+	color:#A5A5A5;
+	font-size:15px;
+	
+}
+footer ul{
+	position:relative;
+	right:-50%;
+	bottom:-17%;
+}
+footer a{
+	text-decoration:none;
+	color:#568193;
+}
+footer li.link{
+	color:#415967;
+}
+
+/*iframe*/
+#toubu{
+	width:1900px;
+	height:450px;
+	
+}
+#weibu{
+	width:1900px;
+	height:160px;
+	
+}

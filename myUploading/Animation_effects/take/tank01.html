@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>坦克大战</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		h1{
+			
+			margin-left:45%;
+		}
+		#tankbg{
+			position: absolute;
+			top: 7%;
+			left: 25%
+		}
+	</style>
+</head>
+<body onkeydown = "getCommand();">
+<h1>坦克大战</h1>
+<canvas id="tankbg" width="1000px" height="800px" style="background-color: black;" ></canvas>
+<span id="aa"></span>
+<script type="text/javascript" src = "tank01.js"></script>
+<script type="text/javascript">
+	var canvas = document.getElementById('tankbg');
+	var btn = canvas.getContext("2d");   //得到上下文
+
+			
+
+
+
+	//我的坦克hero 
+	var hero = new Hero(200,140,0);
+
+
+
+	// 定义自己的坦克射出的子弹
+	var heroBullets = new Array();
+
+	// 定义敌人的坦克射出的子弹
+	var enemyBullets = new Array();
+
+	// 定义敌人的坦克
+	var enemyTanks = new Array();
+
+	// 定义一个炸弹数组
+	var bombs = new Array();
+
+	// 先死后活，定三个敌人
+	for(i=0;i<4;i++){
+		var enemyTank = new EnemyTank((i+1)*50,0,2);
+
+		// 把敌人的坦克放入数组
+		enemyTanks[i] = enemyTank;
+
+		// 启动坦克
+		window.setInterval("enemyTanks["+i+"].run()",30);
+		window.setInterval("enemyTanks["+i+"].shotHero()",1000);
+
+	}
+
+	// 专门写一个函数，用于定时刷新我们的作战区，把要在作战区出现的元素弄出来
+	function flashTankMap(){
+		// 把画布清理干净
+		btn.clearRect(0,0,1000,800);
+
+
+
+		// 画hero坦克
+		drawHeroTank(hero);
+
+		// 画enemy坦克
+		for(var i = 0;i<4;i++){
+			drawEnemyTank(enemyTanks[i]);
+
+		}
+
+		
+		// 画子弹
+		drawHeroBullet();
+
+		// 判断是否中弹
+		isHitHeroBullet();
+
+		// 画爆炸图片
+		drawEnemyBomb();
+	} 
+
+	// 接收键盘输入
+	function getCommand(){
+		var code = event.keyCode;
+		// 通过event.keyCode来判断键盘的ASCII值
+
+		switch(code){
+			case 87:
+				hero.moveUp();
+				break;
+			case 68:
+				hero.moveRight();
+				break;
+			case 83:
+				hero.moveDown();
+				break;
+			case 65:
+				hero.moveLeft();
+				break;
+			case 74:
+				hero.shotEnemy();
+
+		}
+		flashTankMap();
+	}
+
+	// 每隔一段时间刷新一下画布
+	window.setInterval("flashTankMap()",10);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+		<head>
+			<meta charset="utf-8">
+			<title></title>
+			<style>
+				*{
+					margin:0;
+					padding:0;
+				}
+				body{
+					background:#000;
+				}
+				#heart{
+				position:relative;
+					width:100px;
+					height:160px;
+					margin:200px auto;
+					transform-style:preserve-3d;
+					animation:rota 15s linear infinite;
+				}
+				@keyframes rota{
+					to{
+						transform:rotateY(360deg) rotateX(360deg);
+					}
+					
+				}
+				#heart div.rot{
+					position:absolute;
+					width:100px;
+					height:160px;
+					left:0;
+					top:0;
+					border:1px solid red;
+					border-radius:50% 50% 0/40% 50% 0;
+					border-width:1px 1px 0 0;
+					transform:rotate(45deg);
+				}
+
+			</style>
+		</head>
+		<body>
+			<div id="heart">
+				<div></div>
+			</div>
+			<script type="text/javascript">
+				var heart=document.getElementById("heart");
+				for(var i=0;i<36;i++){
+					var oDiv=document.createElement("div");
+					oDiv.className="rot";
+					oDiv.style.transform="rotateY("+10*i+"deg) rotateZ(45deg) translateX(30px)";
+					heart.appendChild(oDiv);		
+				}			
+			</script>
+		</body>
+
+</html>
